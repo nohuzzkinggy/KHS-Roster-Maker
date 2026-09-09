@@ -445,17 +445,15 @@
 
 <script type="module">
   // ------------------------------------------------------------------
-  // Firebase setup. Create a free Firebase project, enable Firestore,
-  // then paste your project's config below. Full steps are in the
-  // message this file was delivered with.
+  // Firebase setup — connected to the "roster-maker" project.
   // ------------------------------------------------------------------
   var firebaseConfig = {
-    apiKey: "PASTE_YOUR_API_KEY_HERE",
-    authDomain: "PASTE_YOUR_PROJECT_ID_HERE.firebaseapp.com",
-    projectId: "PASTE_YOUR_PROJECT_ID_HERE",
-    storageBucket: "PASTE_YOUR_PROJECT_ID_HERE.appspot.com",
-    messagingSenderId: "PASTE_YOUR_SENDER_ID_HERE",
-    appId: "PASTE_YOUR_APP_ID_HERE"
+    apiKey: "AIzaSyAS6jNLsHDsnIuXQdlTj2eWL8FWhZG3j2g",
+    authDomain: "roster-maker-ce9d7.firebaseapp.com",
+    projectId: "roster-maker-ce9d7",
+    storageBucket: "roster-maker-ce9d7.firebasestorage.app",
+    messagingSenderId: "366009230465",
+    appId: "1:366009230465:web:6e67cf8a2db189dac3d980"
   };
 
   var ROLE_ZONES = [
@@ -820,8 +818,8 @@
     }
 
     try {
-      var appMod = await import("https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js");
-      fs = await import("https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js");
+      var appMod = await import("https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js");
+      fs = await import("https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js");
       var app = appMod.initializeApp(firebaseConfig);
       db = fs.getFirestore(app);
     } catch (e) {
